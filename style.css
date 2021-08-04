@@ -1,0 +1,535 @@
+@import url("https://use.typekit.net/hsg2bhp.css");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: montserrat, sans-serif;
+}
+
+:root {
+  --color-primary: #64ccf8;
+  --color-primary-dark: #0670b6;
+  --color-white: #ffffff;
+  --color-gray: #626262;
+  --color-gray-light: #e9ebeb;
+  --color-gradient-bg: transparent
+    linear-gradient(
+      90deg,
+      #0670b6 0%,
+      #097bc1 7%,
+      #097bc2 16%,
+      #0d7fc1 42%,
+      #228fc7 56%,
+      #208ec7 63%,
+      #1786c3 70%,
+      #0465ab 100%
+    )
+    0% 0% no-repeat padding-box;
+
+  --content-width: 75%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 80%;
+  scroll-behavior: smooth;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 70%;
+  }
+}
+body {
+  background: url("https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/86ee8373-7921-4e4f-9c2b-c0b7458a3efe.png");
+  background-size: 1920px 1080px;
+  background-position: 0px -100px;
+}
+
+.container {
+  display: grid;
+}
+
+.sticky {
+  width: 100%;
+  display: grid;
+  grid-template-columns: var(--content-width) 1fr;
+  grid-template-rows: 6rem;
+  /* background-color: red; */
+  position: fixed;
+  z-index: 100;
+}
+
+.sticky_navBar {
+  padding: 2rem;
+
+  background: var(--color-gradient-bg);
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu {
+  width: 100%;
+  text-align: right;
+  display: none;
+}
+.mobile-menu img {
+  width: 30px;
+}
+.sticky_navBar-left h3 {
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+.sticky_navBar-right {
+  text-align: right;
+  width: 100%;
+  color: var(--color-white);
+}
+
+.sticky_navBar-right ul {
+  list-style-type: none;
+}
+
+.sticky_navBar-right li {
+  display: inline;
+}
+
+.sticky_navBar-right a {
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 0 0.7rem;
+}
+
+.sticky_twitterFeed {
+  padding: 2rem;
+
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(35px);
+  backdrop-filter: blur(35px);
+
+  height: 100vh;
+}
+
+.sticky_twitterFeed h3 {
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  text-align: center;
+}
+
+.twitterPost {
+  background-color: white;
+  margin-top: 2rem;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 20% 1fr;
+}
+.twitterPost-pic {
+  margin-right: 1rem;
+}
+.twitterPost-pic img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.twitterPost-body {
+  text-align: left;
+}
+.twitterPost-body-name {
+  font-weight: 600;
+}
+.twitterPost-body-handle {
+  font-size: 0.7rem;
+  color: var(--color-gray);
+}
+
+.twitterPost-body-tweet {
+  margin-top: 0.5rem;
+
+  font-size: 0.8rem;
+}
+
+.twitterPost-body-date {
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  margin-top: 1rem;
+}
+.twitterPost-interact {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.twitterPost-interact img {
+  width: 50%;
+}
+
+.twitterPost-interact a {
+  transition: all 0.2s ease;
+}
+
+.twitterPost-interact a:hover {
+  transform: translateY(-5px);
+}
+.mobile {
+  display: none;
+}
+
+.mobile-twitterPost {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.hero {
+  width: var(--content-width);
+  text-align: center;
+  padding: 12rem 18rem;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  font-size: 5rem;
+  line-height: 95%;
+}
+
+.hero .text-body {
+  text-align: left;
+  margin-top: 3rem;
+}
+.hero-boxes {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.hero-box {
+  width: 33%;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(35px);
+  backdrop-filter: blur(35px);
+  margin: 3rem 1rem;
+  padding: 3rem;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.hero-box img {
+  width: 30px;
+  padding-bottom: 1rem;
+}
+
+.hero-box h2 {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.hero-box p {
+  color: var(--color-gray);
+  padding-bottom: 1rem;
+}
+.hero-box a {
+  color: var(--color-gray);
+}
+
+.hero-box:hover {
+  transform: translateY(-10px);
+}
+
+.disclaimer {
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(35px);
+  backdrop-filter: blur(35px);
+  width: 100%;
+  border-radius: 10px;
+}
+.disclaimer a {
+  color: var(--color-white);
+}
+.section-container {
+  width: 100%;
+}
+.lightblue {
+  background-color: var(--color-primary);
+}
+.lightblue p {
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+.gray {
+  background-color: var(--color-gray-light);
+}
+
+.gray h1 {
+  color: var(--color-primary);
+}
+
+.twitterExamples {
+  padding-top: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.twitterExample {
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.twitterExample img {
+  margin: 0 auto;
+  display: block;
+}
+
+.hashtags {
+  text-align: left;
+  padding-top: 3rem;
+}
+
+.hashtags h3 {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  line-height: 150%;
+}
+
+.followTwitter {
+  display: flex;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.followTwitter-profile {
+  width: 30%;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem;
+  background-size: cover;
+  background-position: 0px -200px;
+  background-repeat: no-repeat;
+  /* height: 350px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.followTwitter-profile img {
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 50%;
+}
+.userName {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.userFollowers {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.userHandle {
+  color: var(--color-gray);
+}
+
+.followers {
+  padding: 0.5rem;
+}
+
+.followers span {
+  font-weight: 600;
+}
+
+.gradient {
+  background: var(--color-gradient-bg);
+}
+footer {
+  padding: 1rem 4rem;
+  display: flex;
+  width: var(--content-width);
+  justify-items: center;
+  align-items: center;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+}
+.left a {
+  color: var(--color-white);
+  padding: 0.5rem 0;
+}
+
+.right {
+  text-align: right;
+  width: 100%;
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+/* button styling */
+
+.button {
+  padding: 0.8rem 2rem !important;
+  text-align: center;
+  border-radius: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  transition: all 0.2s ease;
+  color: var(--color-white);
+  font-weight: 600;
+}
+.outline:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary-dark);
+}
+
+.blueLine {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.blueLine:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.fill {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-weight: 600;
+  border: transparent;
+  transition: all 0.2s ease;
+}
+
+.fill:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+/* MESSAGE */
+
+.message {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  margin-top: 0px;
+  background-color: var(--color-primary);
+  transition: all 0.5s;
+  z-index: 0;
+  padding: 3rem;
+  text-align: center;
+}
+.message h1 {
+  margin: 0 auto;
+  color: var(--color-white) !important;
+  font-size: 5rem;
+  padding: 12rem;
+
+  text-align: center;
+}
+
+.message:target {
+  opacity: 1;
+  visibility: visible;
+  z-index: 300;
+}
+
+@media only screen and (max-width: 1366px) {
+  .sticky_navBar-left h3 {
+    font-size: 1rem !important;
+  }
+  .button {
+    padding: 0.5rem 1.5rem !important;
+  }
+
+  .hero {
+    padding: 9rem 5rem;
+  }
+  /* .sticky {
+        grid-template-columns: 100%;
+      }
+      .sticky_twitterFeed {
+        display: none;
+      }
+      .hero {
+        width: 100%;
+        padding: 9rem;
+      } */
+}
+
+@media only screen and (max-width: 55em) {
+  .sticky {
+    grid-template-columns: 100%;
+  }
+  .sticky_twitterFeed {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+
+  .twitterPost {
+    width: 90%;
+  }
+  .hero {
+    width: 100%;
+    padding: 9rem 5rem;
+  }
+  .hero-boxes {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero-box {
+    width: 100%;
+    margin: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .twitterExamples {
+    flex-direction: column;
+  }
+  .followTwitter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .followTwitter-profile {
+    width: 90%;
+    height: auto;
+  }
+
+  .sticky_navBar-right {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  footer {
+    width: 100%;
+  }
+  body {
+    background-size: 300%;
+  }
+}
