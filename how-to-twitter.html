@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <title>Pro-Israel Tweets</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="carousel.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="carousel.css" /> -->
 
     <link
       rel="stylesheet"
@@ -74,17 +75,87 @@
           </div>
         </div>
       </div>
-      
 
       <!-- HOW DO I CREATE A TWITTER ACCOUNT? -->
 
       <div class="section-container lightblue" id="what">
         <div class="hero">
-          <h1>How do I create a Twitter account?</h1>
+          <h2 style="color: var(--color-white)">
+            How do I create a Twitter account?
+          </h2>
           <br /><br />
-         
-          <!-- CAROUSEL -->
-          <section class="carousel" aria-label="Gallery">
+
+          
+
+          <div class="carousel">
+            <div class="carousel__slide" id="1">
+              <img
+                src="https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/9d3ff6b5-dc17-492e-94e6-37b6f2396294.png"
+              />
+            </div>
+            <div class="carousel__slide" id="2">
+              <img
+                src="https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/23c17b06-dd47-499f-a69b-b0bec95a5ac5.png"
+              />
+            </div>
+            <div class="carousel__slide" id="3">
+              <img
+                src="https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/2c2ce911-b143-4557-92ee-233c023729b9.png"
+              />
+            </div>
+            <div class="carousel__slide" id="4">
+              <img
+                src="https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/41ccba48-40f0-4efb-9b78-09decfe46aea.png"
+              />
+            </div>
+
+            <div class="carousel__slide" id="5">
+              <img
+                src="https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/38b794a3-a3a9-416b-b4e0-163a2912d7ab.png"
+              />
+            </div>
+
+              <div class="carousel__slide" id="6">
+                <img
+                  src="https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/bcb103b9-807a-4794-ad41-ff5a07706175.png"
+                />
+              </div>
+
+              <div class="carousel__slide" id="7">
+                <img
+                  src="https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/6364491c-bd03-4105-8e37-319b2095aeb7.png"
+                />
+              </div>
+
+              <div class="carousel__slide" id="8">
+                <img
+                  src="https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/e7f8b269-16c3-4ef2-800b-eac7c5529935.png"
+                />
+              </div>
+
+              <div class="carousel__slide" id="9">
+                <img
+                  src="https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/f13ee1ff-6a57-413f-933e-1638671dbb5d.png"
+                />
+              </div>
+
+              <br /><br />
+              <div class="carousel__buttons">
+                <a class="prevent" href="#1"> 1</a>
+                <a class="prevent" href="#2" id="2">2</a>
+                <a class="prevent" href="#3">3</a>
+                <a class="prevent" href="#4">4</a>
+                <a class="prevent" href="#5">5</a>
+                <a class="prevent" href="#6">6</a>
+                <a class="prevent" href="#7">7</a>
+                <a class="prevent" href="#8">8</a>
+                <a class="prevent" href="#9">9</a>
+              </div>
+            </div>
+            <!-- CAROUSEL -->
+
+            <!-- PREMADE CAROUSEL -->
+            <!-- <section class="carousel" aria-label="Gallery">
             <ol class="carousel__viewport">
               <li id="carousel__slide1"
                   tabindex="0"
@@ -121,10 +192,20 @@
                 <a href="#carousel__slide3"
                    class="carousel__prev">Go to previous slide</a>
                 <a href="#carousel__slide1"
+                   class="carousel__next">Go to next slide</a>
+              </li>
+
+              <li id="carousel__slide5"
+                  tabindex="0"
+                  class="carousel__slide">
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide4"
+                   class="carousel__prev">Go to previous slide</a>
+                <a href="#carousel__slide1"
                    class="carousel__next">Go to first slide</a>
               </li>
-            </ol>
-            <aside class="carousel__navigation">
+            </ol> -->
+            <!-- <aside class="carousel__navigation">
               <ol class="carousel__navigation-list">
                 <li class="carousel__navigation-item">
                   <a href="#carousel__slide1"
@@ -143,15 +224,12 @@
                      class="carousel__navigation-button">Go to slide 4</a>
                 </li>
               </ol>
-            </aside>
-          </section>
-          
-          
+            </aside> -->
+            <!-- </section> -->
+          </div>
         </div>
       </div>
-    </div>
 
-    
       <!-- FOOTER -->
       <div class="section-container gradient">
         <footer>
@@ -167,4 +245,19 @@
       </div>
     </div>
   </body>
+
+  <script>
+    $(document).ready(function () {
+      $(".prevent").click(function (event) {
+        $("html, body").animate(
+          {
+            scrollTop: "+=-80px",
+          },
+          800
+        );
+
+        
+      });
+    });
+  </script>
 </html>

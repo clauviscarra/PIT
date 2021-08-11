@@ -1,3 +1,5 @@
+@import "style.css";
+
 @keyframes tonext {
   75% {
     left: 0;
@@ -98,15 +100,38 @@ li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-color: #f99;
+  background-color: var(--color-primary-dark);
   counter-increment: item;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.carousel__slide:nth-child(even) {
-  background-color: #99f;
+#carousel__slide1 {
+  background-image: url("https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/9d3ff6b5-dc17-492e-94e6-37b6f2396294.png");
 }
 
-.carousel__slide:before {
+#carousel__slide2 {
+  background-image: url("https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/23c17b06-dd47-499f-a69b-b0bec95a5ac5.png");
+}
+
+#carousel__slide3 {
+  background-image: url("https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/2c2ce911-b143-4557-92ee-233c023729b9.png");
+}
+
+#carousel__slide4 {
+  background-image: url("https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/41ccba48-40f0-4efb-9b78-09decfe46aea.png");
+}
+
+#carousel__slide5 {
+  background-image: url("https://image.act.aipac.org/lib/fe8313727d6d027b73/m/3/38b794a3-a3a9-416b-b4e0-163a2912d7ab.png");
+}
+
+/* .carousel__slide:nth-child(even) {
+  background-color: var(--color-primary-light);
+} */
+
+/* .carousel__slide:before {
   content: counter(item);
   position: absolute;
   top: 50%;
@@ -114,7 +139,7 @@ li {
   transform: translate3d(-50%, -40%, 70px);
   color: #fff;
   font-size: 2em;
-}
+} */
 
 .carousel__snapper {
   position: absolute;

@@ -13,7 +13,7 @@
   --color-primary: #64ccf8;
   --color-primary-dark: #0670b6;
   --color-white: #ffffff;
-  --color-gray: #626262;
+  --color-gray: #5f6061;
   --color-gray-light: #e9ebeb;
   --color-gradient-bg: transparent
     linear-gradient(
@@ -479,6 +479,46 @@ footer {
   opacity: 1;
   visibility: visible;
   z-index: 300;
+}
+
+.carousel__slide {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.carousel__slide:target {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.carousel__slide img {
+  width: 100%;
+}
+
+.carousel__buttons a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  padding: 0.7rem 1.44rem;
+  margin: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+/* .carousel__buttons a:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+} */
+.carousel__buttons a:hover,
+.carousel__buttons a:active,
+.carousel__buttons a:focus,
+.carousel__buttons a:target {
+  background-color: var(--color-white);
+  color: var(--color-primary);
 }
 
 @media only screen and (max-width: 1366px) {
